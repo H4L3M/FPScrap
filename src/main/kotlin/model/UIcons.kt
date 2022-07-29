@@ -5,11 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class UIcons(
     @SerializedName("data")
-    val `data`: List<Data>,
-//    @SerializedName("meta")
-//    val meta: Meta,
-//    @SerializedName("success")
-//    val success: Boolean
+    val `data`: List<Data>
 ) {
     data class Data(
         @SerializedName("class")
@@ -40,30 +36,5 @@ data class UIcons(
         val tags: String,
         @SerializedName("teamId")
         val teamId: Int
-    )
-
-    data class Meta(
-        @SerializedName("baseAjaxUrl")
-        val baseAjaxUrl: String,
-        @SerializedName("baseUrl")
-        val baseUrl: String,
-        @SerializedName("currentPage")
-        val currentPage: Int,
-        @SerializedName("firstAjaxUrl")
-        val firstAjaxUrl: String,
-        @SerializedName("firstPage")
-        val firstPage: Int,
-        @SerializedName("firstUrl")
-        val firstUrl: String,
-        @SerializedName("nextAjaxUrl")
-        val nextAjaxUrl: String,
-        @SerializedName("nextPage")
-        val nextPage: Int,
-        @SerializedName("nextText")
-        val nextText: String,
-        @SerializedName("nextUrl")
-        val nextUrl: String,
-        @SerializedName("totalPages")
-        val totalPages: Int
     )
 }

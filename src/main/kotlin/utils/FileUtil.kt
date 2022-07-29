@@ -8,9 +8,9 @@ import java.nio.channels.Channels
 import java.nio.file.Files
 import java.nio.file.Path
 
-const val DESKTOP = "/home/halem/Desktop/freepik/"
-const val STORYSET = "storyset/"
-const val UICONS = "flaticon/uicons/"
+const val DESKTOP = "/home/halem/Desktop/"
+const val STORYSET = "freepik/storyset/"
+const val UICONS = "freepik/flaticon/uicons/"
 
 fun save(url: String, outputFileName: File) {
     if (!outputFileName.exists()) {
@@ -26,9 +26,6 @@ fun save(url: String, outputFileName: File) {
     }
 }
 
-fun File.sizeKB(): Long = this.length() / 1024
-fun File.sizeMB(): Long = this.length() / 1024 * 1024
-
 fun Path.size(): String {
     return try {
         val size = Files.size(this).toString()
@@ -38,7 +35,6 @@ fun Path.size(): String {
         ""
     }
 }
-
 
 fun createFolder(child: String) {
     val dir = File(DESKTOP, child)

@@ -5,11 +5,8 @@ import model.UIcons
 import utils.*
 import java.io.File
 
-
 private val gson: Gson = Gson().newBuilder().create()
-
 private var number = 1
-
 
 object StoreySet {
 
